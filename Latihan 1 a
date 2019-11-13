@@ -1,0 +1,11 @@
+package Latihan1;
+
+public abstract class Latihan {
+    public void function(){
+        System.out.println("Transportasion Tools");    
+    }
+    public void fuel(){
+        System.out.println("Fuels");
+    }
+    public abstract void walk();
+}
