@@ -1,0 +1,28 @@
+package Latihan3;
+
+    public class PembayaranGaji {
+
+    public int hitungGaji(Latihan3.Pegawai peg) {
+        int uang = peg.gaji();
+        if (peg instanceof Latihan3.Direktur) {
+            uang += ((Latihan3.Direktur) peg).tunajangan();
+        }
+        if (peg instanceof Latihan3.Staf) {
+            uang += ((Latihan3.Staf) peg).Bonus();
+        }
+        return uang;
+    }
+
+    public static void main(String[] args) {
+        PembayaranGaji pg = new PembayaranGaji();
+        Latihan3.Staf Budi = new Latihan3.Staf();
+        Latihan3.Direktur Roni = new Latihan3.Direktur();
+        System.out.println("Gaji yang dibayarkan untuk staf : " + pg.hitungGaji(Budi));
+        System.out.println("Gaji yang dibayarkan kepada direktur :" + pg.hitungGaji(Roni));
+    }
+}
+
+run:
+Gaji yang dibayarkan untuk staf : 60000
+Gaji yang dibayarkan kepada direktur :150000
+BUILD SUCCESSFUL (total time: 0 seconds)
