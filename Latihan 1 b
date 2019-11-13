@@ -1,0 +1,11 @@
+package Latihan1;
+
+public class Aeroplan extends Latihan {
+ public void walk(){
+     System.out.println("Aeroplan is Flying");
+ }   
+    public static void main(String[] args) {
+        Aeroplan garuda = new Aeroplan();
+        
+    }
+}
